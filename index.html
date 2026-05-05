@@ -1,0 +1,1114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Guia Burocrático Express · CNPJ, Alvará, CRM e Tributação em 7 dias · Cirurgião Particular Premium</title>
+<meta name="description" content="O passo a passo completo para abrir seu consultório legalmente em 1 semana — bônus exclusivo do Desafio Cirurgião Particular Premium." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0a0e;
+    --bg-2: #14141b;
+    --bg-3: #1c1c25;
+    --bg-4: #232330;
+    --line: #2a2a36;
+    --line-2: #353545;
+    --text: #e8e8ec;
+    --muted: #a0a0ad;
+    --soft: #c8c8d2;
+    --gold: #c9a961;
+    --gold-soft: #d4b87a;
+    --gold-bright: #e8c987;
+    --gold-dark: #8a7340;
+    --red: #c95a5a;
+    --green: #6ec98f;
+    --blue: #6e9dc9;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0; padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Crimson Pro', Georgia, serif;
+    font-size: 18px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    background-image:
+      radial-gradient(ellipse 80% 50% at 50% -10%, rgba(201, 169, 97, 0.08), transparent 60%),
+      radial-gradient(ellipse 60% 40% at 80% 100%, rgba(201, 169, 97, 0.04), transparent 50%);
+    background-attachment: fixed;
+  }
+  .container { max-width: 1080px; margin: 0 auto; padding: 0 32px; }
+  .narrow { max-width: 760px; margin: 0 auto; padding: 0 32px; }
+
+  h1, h2, h3, h4, h5, .num, .label, nav, .kicker, .day-label, .pill, .stat-num, .stat-label, .step-num, .cta-btn, .footer-meta, .toc {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  h1 { font-size: 64px; line-height: 1.02; font-weight: 800; margin: 0 0 16px; letter-spacing: -0.025em; }
+  h2 { font-size: 40px; line-height: 1.15; font-weight: 700; margin: 96px 0 28px; letter-spacing: -0.015em; color: var(--gold-soft); }
+  h3 { font-size: 26px; line-height: 1.25; font-weight: 600; margin: 48px 0 16px; letter-spacing: -0.01em; color: var(--text); }
+  h4 { font-size: 14px; line-height: 1.35; font-weight: 600; margin: 28px 0 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); }
+  p { margin: 0 0 18px; color: var(--soft); }
+  strong { color: var(--text); font-weight: 600; }
+  em { color: var(--gold-soft); font-style: italic; }
+  ul, ol { padding-left: 24px; margin: 0 0 24px; color: var(--soft); }
+  li { margin: 0 0 10px; }
+  a { color: var(--gold-soft); text-decoration: none; border-bottom: 1px solid rgba(201, 169, 97, 0.3); transition: all .2s; }
+  a:hover { color: var(--gold-bright); border-color: var(--gold-bright); }
+
+  /* HERO */
+  .hero {
+    padding: 80px 0 56px;
+    border-bottom: 1px solid var(--line);
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(201, 169, 97, 0.12), transparent 60%);
+    pointer-events: none;
+  }
+  .hero-inner { position: relative; z-index: 2; }
+  .brand-mark {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 32px;
+    padding: 8px 14px;
+    border: 1px solid var(--line-2);
+    border-radius: 100px;
+    background: rgba(28, 28, 37, 0.6);
+    backdrop-filter: blur(10px);
+  }
+  .brand-mark .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 12px var(--gold); }
+  .brand-mark span { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold-soft); }
+
+  .kicker {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 24px;
+  }
+  .hero h1 { color: var(--text); }
+  .hero h1 .gold { color: var(--gold-soft); font-style: italic; font-family: 'Crimson Pro', serif; font-weight: 600; }
+  .hero-sub {
+    font-size: 22px;
+    line-height: 1.5;
+    color: var(--muted);
+    max-width: 720px;
+    margin: 0 0 40px;
+  }
+
+  .hero-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    margin-top: 56px;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .stat {
+    padding: 28px 24px;
+    border-right: 1px solid var(--line);
+  }
+  .stat:last-child { border-right: none; }
+  .stat-num {
+    font-size: 36px;
+    font-weight: 800;
+    color: var(--gold-soft);
+    letter-spacing: -0.02em;
+    margin-bottom: 4px;
+  }
+  .stat-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  /* TOC */
+  .toc-wrap {
+    padding: 56px 0;
+    border-bottom: 1px solid var(--line);
+    background: var(--bg-2);
+  }
+  .toc {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4px 32px;
+  }
+  .toc a {
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--line);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    color: var(--soft);
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .toc a:hover { color: var(--gold-bright); }
+  .toc-num {
+    font-family: 'Inter', sans-serif;
+    color: var(--gold-dark);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+  }
+
+  /* DIAS */
+  section { padding: 56px 0; }
+  section.alt { background: var(--bg-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+
+  .day-card {
+    background: linear-gradient(180deg, var(--bg-3) 0%, var(--bg-2) 100%);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 40px 44px;
+    margin: 32px 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .day-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    opacity: 0.5;
+  }
+  .day-header {
+    display: flex;
+    align-items: baseline;
+    gap: 20px;
+    margin-bottom: 8px;
+  }
+  .day-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--gold);
+    background: rgba(201, 169, 97, 0.08);
+    border: 1px solid rgba(201, 169, 97, 0.2);
+    padding: 6px 12px;
+    border-radius: 4px;
+  }
+  .day-time {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    color: var(--muted);
+    font-weight: 500;
+  }
+  .day-card h3 {
+    margin: 0 0 12px;
+    font-size: 28px;
+  }
+  .day-lead {
+    color: var(--muted);
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 24px;
+    font-style: italic;
+  }
+  .day-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 24px;
+  }
+  .day-block {
+    background: var(--bg);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 22px;
+  }
+  .day-block h4 { margin: 0 0 14px; }
+  .day-block ul { margin: 0; padding-left: 18px; }
+  .day-block li { font-size: 15px; line-height: 1.55; margin-bottom: 8px; color: var(--soft); }
+
+  .checklist { list-style: none; padding-left: 0; }
+  .checklist li {
+    position: relative;
+    padding-left: 28px;
+    font-size: 15px;
+  }
+  .checklist li::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 7px;
+    width: 14px; height: 14px;
+    border: 1.5px solid var(--gold);
+    border-radius: 3px;
+    background: rgba(201, 169, 97, 0.05);
+  }
+
+  /* TABELA TRIBUTOS */
+  .tax-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 32px 0;
+    font-size: 15px;
+    background: var(--bg-3);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--line);
+  }
+  .tax-table th {
+    background: rgba(201, 169, 97, 0.08);
+    color: var(--gold);
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 16px 18px;
+    text-align: left;
+    border-bottom: 1px solid var(--line-2);
+  }
+  .tax-table td {
+    padding: 16px 18px;
+    border-bottom: 1px solid var(--line);
+    color: var(--soft);
+  }
+  .tax-table tr:last-child td { border-bottom: none; }
+  .tax-table tr:hover td { background: rgba(201, 169, 97, 0.03); }
+  .tax-table .total-row td {
+    background: rgba(201, 169, 97, 0.06);
+    color: var(--gold-soft);
+    font-weight: 600;
+  }
+
+  /* CALC FATOR R */
+  .calc-card {
+    background: linear-gradient(135deg, var(--bg-3) 0%, var(--bg-2) 100%);
+    border: 1px solid var(--gold-dark);
+    border-radius: 16px;
+    padding: 36px 40px;
+    margin: 32px 0;
+  }
+  .calc-formula {
+    font-family: 'Crimson Pro', serif;
+    font-style: italic;
+    font-size: 24px;
+    color: var(--gold-bright);
+    text-align: center;
+    padding: 24px;
+    margin: 20px 0;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    border: 1px dashed rgba(201, 169, 97, 0.3);
+  }
+  .calc-rules {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 20px;
+  }
+  .calc-rule {
+    padding: 18px 20px;
+    background: var(--bg);
+    border-left: 3px solid var(--gold);
+    border-radius: 4px;
+  }
+  .calc-rule .label-r {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 6px;
+  }
+  .calc-rule .value-r {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--gold-soft);
+  }
+  .calc-rule .desc-r {
+    font-size: 14px;
+    color: var(--soft);
+    margin-top: 6px;
+  }
+
+  /* ALERT BOX */
+  .alert {
+    background: rgba(201, 90, 90, 0.06);
+    border-left: 3px solid var(--red);
+    padding: 20px 24px;
+    border-radius: 4px;
+    margin: 24px 0;
+  }
+  .alert h4 {
+    color: var(--red);
+    margin-top: 0;
+  }
+  .alert p { margin-bottom: 0; }
+
+  .tip {
+    background: rgba(110, 201, 143, 0.06);
+    border-left: 3px solid var(--green);
+    padding: 20px 24px;
+    border-radius: 4px;
+    margin: 24px 0;
+  }
+  .tip h4 { color: var(--green); margin-top: 0; }
+
+  .gold-box {
+    background: rgba(201, 169, 97, 0.05);
+    border: 1px solid rgba(201, 169, 97, 0.2);
+    border-radius: 12px;
+    padding: 28px 32px;
+    margin: 32px 0;
+  }
+  .gold-box h4 { color: var(--gold); margin-top: 0; }
+
+  /* TIMELINE */
+  .timeline {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+    margin: 40px 0;
+    position: relative;
+  }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    top: 28px; left: 4%; right: 4%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold-dark), var(--gold), var(--gold-dark), transparent);
+    z-index: 0;
+  }
+  .tl-day {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+  .tl-circle {
+    width: 56px;
+    height: 56px;
+    margin: 0 auto 12px;
+    border-radius: 50%;
+    background: var(--bg-3);
+    border: 1.5px solid var(--gold-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    color: var(--gold-soft);
+    font-size: 18px;
+    transition: all .3s;
+  }
+  .tl-day:hover .tl-circle {
+    border-color: var(--gold);
+    background: rgba(201, 169, 97, 0.1);
+    box-shadow: 0 0 24px rgba(201, 169, 97, 0.3);
+  }
+  .tl-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    color: var(--soft);
+    line-height: 1.3;
+  }
+
+  /* FOOTER */
+  footer {
+    padding: 64px 0 80px;
+    border-top: 1px solid var(--line);
+    background: var(--bg-2);
+    text-align: center;
+  }
+  .footer-meta {
+    font-size: 12px;
+    color: var(--muted);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  .footer-brand {
+    font-family: 'Crimson Pro', serif;
+    font-style: italic;
+    font-size: 22px;
+    color: var(--gold-soft);
+    margin-bottom: 14px;
+  }
+  .footer-disclaimer {
+    max-width: 680px;
+    margin: 32px auto 0;
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.65;
+  }
+
+  /* MOBILE */
+  @media (max-width: 880px) {
+    h1 { font-size: 42px; }
+    h2 { font-size: 30px; margin-top: 64px; }
+    h3 { font-size: 22px; }
+    .hero { padding: 56px 0 40px; }
+    .hero-sub { font-size: 18px; }
+    .hero-stats { grid-template-columns: repeat(2, 1fr); }
+    .stat { border-right: none; border-bottom: 1px solid var(--line); }
+    .stat:nth-child(2n) { border-right: none; }
+    .stat:nth-last-child(-n+2) { border-bottom: none; }
+    .toc { grid-template-columns: 1fr; }
+    .day-card { padding: 28px 22px; }
+    .day-grid { grid-template-columns: 1fr; }
+    .calc-rules { grid-template-columns: 1fr; }
+    .timeline { grid-template-columns: repeat(7, 1fr); gap: 4px; }
+    .tl-circle { width: 40px; height: 40px; font-size: 14px; }
+    .tl-title { font-size: 9px; }
+    .tax-table { font-size: 13px; }
+    .tax-table th, .tax-table td { padding: 10px 8px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="container hero-inner">
+    <div class="brand-mark">
+      <span class="dot"></span>
+      <span>Mentoria CPP · Bônus Express</span>
+    </div>
+    <p class="kicker">Guia Burocrático Express</p>
+    <h1>CNPJ, alvará, CRM e tributação:<br><span class="gold">tudo que você resolve em 1 semana.</span></h1>
+    <p class="hero-sub">O passo a passo que tira você do consultório informal e te coloca de pé, legalmente, em 7 dias úteis. Sem advogado, sem confusão, sem desculpa.</p>
+
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="stat-num">7</div>
+        <div class="stat-label">Dias úteis</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">4</div>
+        <div class="stat-label">Frentes simultâneas</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">~13%</div>
+        <div class="stat-label">Carga tributária mínima</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">1</div>
+        <div class="stat-label">Contador para o resto da vida</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- TIMELINE -->
+<section>
+  <div class="container">
+    <h4 style="text-align:center;">Visão Geral · Os 7 dias</h4>
+    <div class="timeline">
+      <a href="#dia1" class="tl-day"><div class="tl-circle">1</div><div class="tl-title">Estrutura<br>Societária</div></a>
+      <a href="#dia2" class="tl-day"><div class="tl-circle">2</div><div class="tl-title">Abertura<br>do CNPJ</div></a>
+      <a href="#dia3" class="tl-day"><div class="tl-circle">3</div><div class="tl-title">Alvarás &<br>Vigilância</div></a>
+      <a href="#dia4" class="tl-day"><div class="tl-circle">4</div><div class="tl-title">CRM<br>Pessoa Jurídica</div></a>
+      <a href="#dia5" class="tl-day"><div class="tl-circle">5</div><div class="tl-title">Contador &<br>Regime</div></a>
+      <a href="#dia6" class="tl-day"><div class="tl-circle">6</div><div class="tl-title">Conta PJ &<br>Nota Fiscal</div></a>
+      <a href="#dia7" class="tl-day"><div class="tl-circle">7</div><div class="tl-title">Plano PJ &<br>Convênios</div></a>
+    </div>
+  </div>
+</section>
+
+<!-- TOC -->
+<div class="toc-wrap">
+  <div class="container">
+    <h4 style="margin-top:0;">Sumário Executivo</h4>
+    <nav class="toc">
+      <a href="#dia1"><span>Dia 1 · Estrutura Societária</span><span class="toc-num">01</span></a>
+      <a href="#dia2"><span>Dia 2 · Abertura do CNPJ</span><span class="toc-num">02</span></a>
+      <a href="#dia3"><span>Dia 3 · Alvarás e Vigilância</span><span class="toc-num">03</span></a>
+      <a href="#dia4"><span>Dia 4 · CRM-PJ</span><span class="toc-num">04</span></a>
+      <a href="#dia5"><span>Dia 5 · Contador & Regime Tributário</span><span class="toc-num">05</span></a>
+      <a href="#dia6"><span>Dia 6 · Conta PJ + NF-e</span><span class="toc-num">06</span></a>
+      <a href="#dia7"><span>Dia 7 · Plano PJ + Convênios</span><span class="toc-num">07</span></a>
+      <a href="#tributacao"><span>Anexo · Tributação Detalhada</span><span class="toc-num">08</span></a>
+      <a href="#fator-r"><span>Anexo · Fator R Explicado</span><span class="toc-num">09</span></a>
+      <a href="#checklist"><span>Checklist Final</span><span class="toc-num">10</span></a>
+    </nav>
+  </div>
+</div>
+
+<!-- DIA 1 -->
+<section id="dia1">
+  <div class="container">
+    <h2>Dia 1 · Estrutura Societária</h2>
+    <p class="narrow" style="padding:0; max-width:760px;">Antes do CNPJ, a decisão estrutural. Ela define proteção patrimonial, simplicidade tributária e o que acontece se algo der errado. Não improvise aqui.</p>
+
+    <div class="day-card">
+      <div class="day-header">
+        <span class="day-label">Manhã · 2h</span>
+        <span class="day-time">Cartório online · contrato social</span>
+      </div>
+      <h3>Escolha o tipo jurídico certo para um consultório médico</h3>
+      <p class="day-lead">A grande maioria dos cirurgiões deveria abrir <strong>SLU — Sociedade Limitada Unipessoal</strong>. Não MEI (médico não pode), não EI (não separa patrimônio), não SS (Sociedade Simples — limita planejamento tributário).</p>
+
+      <div class="day-grid">
+        <div class="day-block">
+          <h4>O que escolher</h4>
+          <ul>
+            <li><strong>SLU</strong> — sozinho, com proteção patrimonial</li>
+            <li><strong>Sociedade Limitada</strong> — com sócio (cônjuge, irmão, sócio operacional)</li>
+            <li><strong>Sociedade Simples Limitada</strong> — só se contador recomendar para evitar ISS retido</li>
+          </ul>
+        </div>
+        <div class="day-block">
+          <h4>O que evitar</h4>
+          <ul>
+            <li><strong>MEI</strong> — proibido para profissões regulamentadas</li>
+            <li><strong>Empresário Individual (EI)</strong> — não separa patrimônio pessoal</li>
+            <li><strong>S/A</strong> — burocracia injustificada para consultório</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tip">
+        <h4>Dica de mentor</h4>
+        <p>Capital social: <strong>R$ 10.000 a R$ 30.000</strong> integralizado já é suficiente. Capital muito alto vira gatilho fiscal sem necessidade. Você pode aumentar depois.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIA 2 -->
+<section id="dia2" class="alt">
+  <div class="container">
+    <h2>Dia 2 · Abertura do CNPJ</h2>
+    <p class="narrow" style="padding:0; max-width:760px;">Com o contrato social na mão, o CNPJ sai em 24-72h. O segredo está na escolha do CNAE e no endereço da empresa.</p>
+
+    <div class="day-card">
+      <div class="day-header">
+        <span class="day-label">Dia inteiro</span>
+        <span class="day-time">Junta Comercial → Receita Federal → Prefeitura</span>
+      </div>
+      <h3>O fluxo correto e os CNAEs que importam</h3>
+
+      <div class="day-grid">
+        <div class="day-block">
+          <h4>CNAE Principal</h4>
+          <ul>
+            <li><strong>8630-5/03</strong> — Atividade médica ambulatorial restrita a consultas</li>
+            <li><strong>8630-5/02</strong> — com procedimentos cirúrgicos (se opera no consultório)</li>
+            <li><strong>8630-5/01</strong> — consulta + apoio diagnóstico/terapêutico</li>
+          </ul>
+        </div>
+        <div class="day-block">
+          <h4>CNAEs Secundários (estratégicos)</h4>
+          <ul>
+            <li><strong>8650-0/04</strong> — Nutrição / equipe multi</li>
+            <li><strong>8690-9/04</strong> — Enfermagem / curativos</li>
+            <li><strong>8599-6/04</strong> — Treinamento / mentorias / cursos</li>
+            <li><strong>7319-0/04</strong> — Marketing / propaganda própria</li>
+          </ul>
+        </div>
+      </div>
+
+      <h4 style="margin-top:36px;">Sequência exata</h4>
+      <ol>
+        <li><strong>Contrato Social</strong> → registro na Junta Comercial do estado (online em SP, RJ, PE, RS, MG)</li>
+        <li><strong>NIRE</strong> → número de identificação do registro</li>
+        <li><strong>CNPJ</strong> → emitido pela Receita Federal automaticamente</li>
+        <li><strong>Inscrição Municipal</strong> → cadastro na prefeitura para emitir NFS-e</li>
+        <li><strong>Inscrição Estadual</strong> → só se vender produtos (cosméticos, suplementos)</li>
+      </ol>
+
+      <div class="alert">
+        <h4>Atenção · Endereço da empresa</h4>
+        <p>O endereço da empresa <strong>precisa ser comercial</strong>. Endereço residencial pode ser usado em alguns municípios, mas NÃO se você vai atender pacientes ali. Se o consultório for em sala alugada, peça contrato de locação <em>em nome da PJ</em> — ou pelo menos uma autorização do locador para uso comercial.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIA 3 -->
+<section id="dia3">
+  <div class="container">
+    <h2>Dia 3 · Alvarás e Vigilância Sanitária</h2>
+    <p class="narrow" style="padding:0; max-width:760px;">Aqui mora o gargalo que trava 80% dos médicos. A boa notícia: você pode rodar protocolado e atender enquanto sai a vistoria. Mas precisa <em>protocolar correto</em>.</p>
+
+    <div class="day-card">
+      <div class="day-header">
+        <span class="day-label">Manhã · Prefeitura</span>
+        <span class="day-time">Alvará de Localização & Funcionamento</span>
+      </div>
+      <h3>Os 4 alvarás que importam</h3>
+
+      <div class="day-grid">
+        <div class="day-block">
+          <h4>1 · Alvará de Funcionamento</h4>
+          <ul>
+            <li>Emitido pela <strong>Prefeitura</strong></li>
+            <li>Verifica zoneamento (sala precisa ser zona comercial ou mista)</li>
+            <li>Habite-se do imóvel</li>
+            <li>Saída em <strong>5-15 dias</strong> com protocolo provisório</li>
+          </ul>
+        </div>
+        <div class="day-block">
+          <h4>2 · Alvará Sanitário (VISA)</h4>
+          <ul>
+            <li>Vigilância Sanitária <strong>municipal ou estadual</strong></li>
+            <li>Inspeção física do consultório</li>
+            <li>Memorial descritivo e planta baixa</li>
+            <li>POPs (Procedimentos Operacionais Padrão)</li>
+            <li>Manual de Boas Práticas</li>
+          </ul>
+        </div>
+        <div class="day-block">
+          <h4>3 · AVCB (Bombeiros)</h4>
+          <ul>
+            <li>Auto de Vistoria do Corpo de Bombeiros</li>
+            <li>Obrigatório se a sala é própria ou andar inteiro</li>
+            <li>Em sala em prédio comercial, normalmente já existe coletivo</li>
+            <li>Extintores, sinalização, rota de fuga</li>
+          </ul>
+        </div>
+        <div class="day-block">
+          <h4>4 · Cadastro CNES</h4>
+          <ul>
+            <li>Cadastro Nacional de Estabelecimentos de Saúde</li>
+            <li>Obrigatório para quem emite atestados, faz convênio ou atende SUS</li>
+            <li>Saída em <strong>até 30 dias</strong> após CNPJ</li>
+            <li>Vincula você (CRM) ao endereço (CNPJ)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tip">
+        <h4>Pro-tip do mentor</h4>
+        <p>Em SP, RJ, BH, Recife, POA — o <strong>Empresa Fácil</strong> ou <strong>VRE Digital</strong> integra Junta + RF + Prefeitura + VISA em um único protocolo. Em cidades menores, vai ter que bater em cada porta. Pergunte ao contador.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIA 4 -->
+<section id="dia4" class="alt">
+  <div class="container">
+    <h2>Dia 4 · CRM Pessoa Jurídica</h2>
+    <p class="narrow" style="padding:0; max-width:760px;">A clínica precisa ter <em>identidade médica</em>. O CRM-PJ é o que dá legitimidade pra clínica vincular você como responsável técnico.</p>
+
+    <div class="day-card">
+      <div class="day-header">
+        <span class="day-label">Tarde · 2-3h</span>
+        <span class="day-time">CRM do estado · presencial ou online</span>
+      </div>
+      <h3>Registro de pessoa jurídica no Conselho Regional de Medicina</h3>
+      <p class="day-lead">Sem CRM-PJ, você opera fora da norma do CFM. E na hora de fechar convênio ou contratar funcionário, isso vira problema.</p>
+
+      <div class="day-grid">
+        <div class="day-block">
+          <h4>Documentos necessários</h4>
+          <ul>
+            <li>Contrato social registrado</li>
+            <li>CNPJ ativo</li>
+            <li>Alvará (mesmo provisório)</li>
+            <li>Comprovante de endereço da PJ</li>
+            <li>Cópia do CRM-PF do responsável técnico</li>
+            <li>Foto do responsável técnico</li>
+            <li>Memorial descritivo das atividades</li>
+          </ul>
+        </div>
+        <div class="day-block">
+          <h4>Custos e prazos (referência 2026)</h4>
+          <ul>
+            <li>Taxa de inscrição PJ: <strong>R$ 600 a R$ 1.200</strong> (varia por estado)</li>
+            <li>Anuidade PJ: <strong>R$ 1.200 a R$ 2.500</strong> (proporcional ao capital social)</li>
+            <li>Saída do registro: <strong>5 a 20 dias úteis</strong></li>
+            <li>Vistoria do CRM: pode acontecer (raro), normalmente é só conferência documental</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="alert">
+        <h4>Cuidado · Responsável Técnico</h4>
+        <p>O Responsável Técnico (RT) responde <strong>civil, ética e criminalmente</strong> por tudo que sai daquela PJ. Se você é o único médico, você é o RT. Se vai ter outro médico operando lá, decida na largada se ele é sócio, RT secundário ou contratado — não deixe ambíguo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIA 5 -->
+<section id="dia5">
+  <div class="container">
+    <h2>Dia 5 · Contador & Regime Tributário</h2>
+    <p class="narrow" style="padding:0; max-width:760px;">Esse é o dia que <em>economiza ou queima</em> dinheiro pelos próximos 12 meses. Escolha mal o regime e paga 5% a mais sobre tudo. Escolha bem e fica sob 13% efetivo.</p>
+
+    <div class="day-card">
+      <div class="day-header">
+        <span class="day-label">Dia inteiro</span>
+        <span class="day-time">Contador especializado em medicina</span>
+      </div>
+      <h3>Contador certo + regime certo = R$ 30k a R$ 60k a menos por ano</h3>
+
+      <h4>Como escolher o contador</h4>
+      <ul>
+        <li><strong>Especializado em medicina</strong> — não serve "contador genérico". Tem que conhecer Anexo III, Fator R, retenção de ISS médico, dedução de despesas.</li>
+        <li><strong>Honorário médio</strong>: R$ 350 a R$ 800/mês para uma PJ médica simples.</li>
+        <li><strong>Já fez 10+ aberturas</strong> — pergunta direto.</li>
+        <li><strong>Tem contato com sua secretária</strong> ou painel digital — economiza seu tempo.</li>
+      </ul>
+
+      <h4 style="margin-top:32px;">Os 2 regimes que importam para você</h4>
+
+      <table class="tax-table">
+        <thead>
+          <tr>
+            <th>Regime</th>
+            <th>Limite anual</th>
+            <th>Carga efetiva*</th>
+            <th>Quando faz sentido</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Simples Nacional</strong><br><span style="font-size:13px; color:var(--muted);">Anexo III · com Fator R</span></td>
+            <td>Até R$ 4,8M</td>
+            <td><strong style="color:var(--green);">6% a 15,5%</strong></td>
+            <td>Quase todo médico até R$ 30-40k/mês de faturamento</td>
+          </tr>
+          <tr>
+            <td><strong>Simples Nacional</strong><br><span style="font-size:13px; color:var(--muted);">Anexo V · sem Fator R</span></td>
+            <td>Até R$ 4,8M</td>
+            <td><strong style="color:var(--red);">15,5% a 30,5%</strong></td>
+            <td>Cilada. Só cai aqui quem não controla o pró-labore.</td>
+          </tr>
+          <tr>
+            <td><strong>Lucro Presumido</strong></td>
+            <td>Sem limite</td>
+            <td><strong style="color:var(--gold-soft);">~13,33% a 16,33%</strong></td>
+            <td>Faturamento alto + folha baixa, ou faturamento &gt; R$ 4,8M</td>
+          </tr>
+          <tr>
+            <td><strong>Lucro Real</strong></td>
+            <td>Sem limite</td>
+            <td>Variável (sobre lucro)</td>
+            <td>Raro para consultório. Só com despesa muito alta.</td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="font-size:13px; color:var(--muted);">* Carga efetiva considera todos os impostos federais + ISS municipal médio (3-5%). Variações por estado/município.</p>
+
+      <div class="gold-box">
+        <h4>Regra prática do mentor</h4>
+        <ul style="margin-bottom:0;">
+          <li>Faturando até <strong>R$ 25k/mês</strong>: Simples Anexo III com Fator R ≥ 28% → carga ~6-9%</li>
+          <li>Entre <strong>R$ 25k e R$ 60k/mês</strong>: ainda Simples, ajustando pró-labore para manter Fator R</li>
+          <li>Acima de <strong>R$ 60k/mês</strong>: simulação obrigatória — pode valer Lucro Presumido</li>
+          <li>Acima de <strong>R$ 400k/mês</strong>: estourou Simples — Lucro Presumido é o caminho</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIA 6 -->
+<section id="dia6" class="alt">
+  <div class="container">
+    <h2>Dia 6 · Conta PJ + Emissão de Nota Fiscal</h2>
+    <p class="narrow" style="padding:0; max-width:760px;">CNPJ sem conta PJ é CNPJ inútil. E sem emissor de nota, você não fatura legalmente. São 2 horas de trabalho — não adie.</p>
+
+    <div class="day-card">
+      <div class="day-header">
+        <span class="day-label">Manhã · 1h</span>
+        <span class="day-time">App do banco · totalmente digital</span>
+      </div>
+      <h3>Conta PJ — abra direto digital</h3>
+
+      <div class="day-grid">
+        <div class="day-block">
+          <h4>Bancos digitais (recomendados)</h4>
+          <ul>
+            <li><strong>BTG Empresas</strong> — sem mensalidade, suporte humano, integração com Pluggy/Conta Azul</li>
+            <li><strong>Inter Empresas</strong> — gratuita, app simples</li>
+            <li><strong>Itaú Empresa One</strong> — se já é Itaú PF, evita atrito</li>
+            <li><strong>Cora</strong> — app limpo, foco em PMEs</li>
+          </ul>
+        </div>
+        <div class="day-block">
+          <h4>Documentos para abrir</h4>
+          <ul>
+            <li>Contrato social</li>
+            <li>CNPJ + Inscrição Municipal</li>
+            <li>RG, CPF e comprovante do sócio</li>
+            <li>Selfie + assinatura digital</li>
+            <li>Saída: <strong>24-72h</strong> 100% online</li>
+          </ul>
+        </div>
+      </div>
+
+      <h4 style="margin-top:36px;">NFS-e — Nota Fiscal de Serviço Eletrônica</h4>
+      <p>A NFS-e é municipal. Cada cidade tem seu portal (NFe.io, ISSNet, Nota Carioca, NFe São Paulo). Configure assim:</p>
+
+      <ol>
+        <li><strong>Cadastre a PJ</strong> no portal da prefeitura para emissão eletrônica</li>
+        <li><strong>Solicite o certificado digital A1 ou A3</strong> da empresa (~R$ 200-300/ano) — A1 é arquivo, A3 é token físico</li>
+        <li><strong>Configure o emissor</strong>:
+          <ul>
+            <li>Portal da prefeitura (gratuito, manual)</li>
+            <li>Conta Azul, Granatum, NFe.io (R$ 49-99/mês, automatizado)</li>
+            <li>Sistema próprio do consultório (Doctoralia, iClinic, Feegow)</li>
+          </ul>
+        </li>
+        <li><strong>Maquininha PJ</strong>: Stone, PagBank, InfinitePay — peça maquininha PJ para os recebíveis caírem na conta da empresa, não na sua pessoa física.</li>
+      </ol>
+
+      <div class="alert">
+        <h4>Erro fatal · Receber no PIX pessoal</h4>
+        <p>Receber pagamento de paciente no <strong>seu CPF</strong> e depois transferir para a PJ é caminho rápido para autuação fiscal e CARF. Tudo que é serviço médico tem que cair no <strong>CNPJ</strong>. Maquininha, PIX, boleto — tudo no PJ.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIA 7 -->
+<section id="dia7">
+  <div class="container">
+    <h2>Dia 7 · Plano de Saúde PJ + Convênios</h2>
+    <p class="narrow" style="padding:0; max-width:760px;">O dia que mais médico esquece — e perde de R$ 800 a R$ 2.500/mês deixando na mesa.</p>
+
+    <div class="day-card">
+      <div class="day-header">
+        <span class="day-label">Manhã + Tarde</span>
+        <span class="day-time">Plano PJ · cadastro nas operadoras</span>
+      </div>
+      <h3>O que você ainda tem que resolver</h3>
+
+      <div class="day-grid">
+        <div class="day-block">
+          <h4>Plano de Saúde Empresarial</h4>
+          <ul>
+            <li>PJ com 2 vidas (você + cônjuge ou você + 1 funcionário) já contrata <strong>plano empresarial</strong></li>
+            <li>Mensalidade <strong>30-50% menor</strong> que plano individual</li>
+            <li>Operadoras: SulAmérica, Bradesco Saúde, Amil, Unimed, Hapvida</li>
+            <li>Ainda permite dedução parcial via PJ (consulte contador)</li>
+          </ul>
+        </div>
+        <div class="day-block">
+          <h4>Cadastro em Convênios (se for o caso)</h4>
+          <ul>
+            <li>Vincula CNPJ + CRM-PJ + CNES + RT na operadora</li>
+            <li>Documentos: contrato social, alvarás, CRM-PJ, CNES, dados bancários PJ</li>
+            <li>Prazo: <strong>30-90 dias</strong> em média</li>
+            <li>Recomendação: comece sem convênio. Acrescente depois, se for estratégico.</li>
+          </ul>
+        </div>
+      </div>
+
+      <h4 style="margin-top:36px;">Últimas pendências do dia 7</h4>
+      <ul class="checklist">
+        <li>Configurar e-mail profissional <strong>@suaclinica.com.br</strong> (Google Workspace ou Microsoft 365 — ~R$ 25/mês)</li>
+        <li>Comprar e ativar <strong>certificado digital A1</strong> da PJ (Serasa, Soluti, Valid)</li>
+        <li>Contratar <strong>seguro de responsabilidade civil profissional</strong> (RCP) — Allianz, Tokio Marine, AIG</li>
+        <li>Cadastrar <strong>e-Social Doméstico</strong> se vai contratar secretária CLT</li>
+        <li>Fazer o <strong>contrato de prestação de serviço</strong> padrão com paciente (modelo do contador) — protege você em caso de questionamento</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- TRIBUTAÇÃO DETALHADA -->
+<section id="tributacao" class="alt">
+  <div class="container">
+    <h2>Anexo · Tributação Detalhada</h2>
+    <p class="narrow" style="padding:0; max-width:760px;">Os números reais que ninguém te mostra na faculdade. Decore para a próxima conversa com seu contador.</p>
+
+    <h3>Simples Nacional · Anexo III (com Fator R)</h3>
+    <table class="tax-table">
+      <thead>
+        <tr>
+          <th>Faixa</th>
+          <th>Faturamento (12 meses)</th>
+          <th>Alíquota nominal</th>
+          <th>Dedução</th>
+          <th>Carga efetiva*</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1ª</td><td>Até R$ 180.000</td><td>6,00%</td><td>R$ 0</td><td>6,00%</td></tr>
+        <tr><td>2ª</td><td>180k a 360k</td><td>11,20%</td><td>R$ 9.360</td><td>~9,40%</td></tr>
+        <tr><td>3ª</td><td>360k a 720k</td><td>13,50%</td><td>R$ 17.640</td><td>~11,60%</td></tr>
+        <tr><td>4ª</td><td>720k a 1,8M</td><td>16,00%</td><td>R$ 35.640</td><td>~13,00%</td></tr>
+        <tr><td>5ª</td><td>1,8M a 3,6M</td><td>21,00%</td><td>R$ 125.640</td><td>~15,50%</td></tr>
+        <tr><td>6ª</td><td>3,6M a 4,8M</td><td>33,00%</td><td>R$ 648.000</td><td>~19,50%</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:13px; color:var(--muted);">* Carga efetiva = ((Receita × Alíquota) – Dedução) ÷ Receita. Já inclui IRPJ, CSLL, PIS, COFINS, CPP, ISS.</p>
+
+    <h3>Lucro Presumido · A composição</h3>
+    <table class="tax-table">
+      <thead>
+        <tr>
+          <th>Tributo</th>
+          <th>Base de cálculo</th>
+          <th>Alíquota</th>
+          <th>Efetivo sobre faturamento</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>IRPJ</td><td>32% do faturamento</td><td>15%</td><td>4,80%</td></tr>
+        <tr><td>IRPJ Adicional</td><td>Lucro acima de R$ 60k/trim</td><td>10%</td><td>variável</td></tr>
+        <tr><td>CSLL</td><td>32% do faturamento</td><td>9%</td><td>2,88%</td></tr>
+        <tr><td>PIS</td><td>Faturamento total</td><td>0,65%</td><td>0,65%</td></tr>
+        <tr><td>COFINS</td><td>Faturamento total</td><td>3%</td><td>3,00%</td></tr>
+        <tr><td>ISS</td><td>Faturamento total</td><td>2 a 5%</td><td>2 a 5%</td></tr>
+        <tr class="total-row"><td colspan="3"><strong>Carga efetiva total</strong></td><td><strong>~13,33% a 16,33%</strong></td></tr>
+      </tbody>
+    </table>
+
+    <div class="tip">
+      <h4>Insight chave</h4>
+      <p>Se você fatura <strong>R$ 50k/mês (R$ 600k/ano)</strong> e seu Fator R está acima de 28%, o Simples te custa <strong>~11,6%</strong>. No Lucro Presumido, custaria <strong>~14-16%</strong>. Diferença de <strong>R$ 1.500 a R$ 2.500/mês</strong> que vão pro seu bolso só por estar no regime certo.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FATOR R -->
+<section id="fator-r">
+  <div class="container">
+    <h2>Anexo · Fator R</h2>
+    <p class="narrow" style="padding:0; max-width:760px;">A regra de bolso mais lucrativa que existe pra médico no Simples. Entender Fator R = pagar metade de imposto.</p>
+
+    <div class="calc-card">
+      <h3 style="margin-top:0;">A fórmula</h3>
+      <div class="calc-formula">
+        Fator R = Folha de pagamento (12m) ÷ Faturamento bruto (12m)
+      </div>
+
+      <div class="calc-rules">
+        <div class="calc-rule">
+          <div class="label-r">Fator R ≥ 28%</div>
+          <div class="value-r">Anexo III</div>
+          <div class="desc-r">Carga efetiva entre <strong>6% e 15,5%</strong>. Esse é o seu lugar.</div>
+        </div>
+        <div class="calc-rule">
+          <div class="label-r">Fator R &lt; 28%</div>
+          <div class="value-r">Anexo V</div>
+          <div class="desc-r">Carga sobe pra <strong>15,5% a 30,5%</strong>. Cilada.</div>
+        </div>
+      </div>
+
+      <h4 style="margin-top:32px;">O que conta como "folha"</h4>
+      <ul>
+        <li><strong>Pró-labore</strong> do(s) sócio(s)</li>
+        <li><strong>Salários</strong> de funcionários CLT</li>
+        <li><strong>INSS patronal</strong> e <strong>FGTS</strong> incidentes</li>
+        <li>13º e férias proporcionais</li>
+        <li><em>Não conta</em>: distribuição de lucros, autônomos, terceirizados PJ</li>
+      </ul>
+
+      <div class="gold-box">
+        <h4>Estratégia pratica</h4>
+        <p>Se seu faturamento mensal é <strong>R$ 40.000</strong>, você precisa de <strong>R$ 11.200/mês em folha</strong> para manter Fator R em 28%. Isso vira:</p>
+        <ul style="margin-bottom:0;">
+          <li>Pró-labore seu de R$ 7.000-9.000</li>
+          <li>Salário da secretária CLT de R$ 2.500-3.500</li>
+          <li>Encargos (INSS + FGTS) somam o restante</li>
+        </ul>
+        <p style="margin-top:16px; margin-bottom:0;"><em>Resultado:</em> você paga <strong>~11,6% no Simples Anexo III</strong>, e ainda gera previdência social, INSS e FGTS para você e sua equipe — em vez de pagar <strong>~22% no Anexo V</strong> e não construir nada.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CHECKLIST -->
+<section id="checklist" class="alt">
+  <div class="container">
+    <h2>Checklist Final · Os 28 itens</h2>
+    <p class="narrow" style="padding:0; max-width:760px;">Imprima essa lista. Risque cada item. Quando todos estiverem riscados, você está <em>oficialmente em pé</em>, legal, escalável e pagando o mínimo de imposto.</p>
+
+    <div class="day-grid">
+      <div class="day-block">
+        <h4>Estrutura & Documentação</h4>
+        <ul class="checklist">
+          <li>Tipo jurídico definido (SLU recomendado)</li>
+          <li>Contrato social redigido e revisado</li>
+          <li>Capital social definido (R$ 10k-30k)</li>
+          <li>CNAEs principal e secundários definidos</li>
+          <li>Endereço comercial confirmado</li>
+        </ul>
+      </div>
+      <div class="day-block">
+        <h4>Registros</h4>
+        <ul class="checklist">
+          <li>Contrato registrado na Junta Comercial</li>
+          <li>NIRE emitido</li>
+          <li>CNPJ ativo</li>
+          <li>Inscrição Municipal liberada</li>
+          <li>Inscrição Estadual (se aplicável)</li>
+        </ul>
+      </div>
+      <div class="day-block">
+        <h4>Alvarás</h4>
+        <ul class="checklist">
+          <li>Alvará de Funcionamento (Prefeitura)</li>
+          <li>Alvará Sanitário (VISA)</li>
+          <li>AVCB (Bombeiros)</li>
+          <li>CNES cadastrado</li>
+          <li>CRM-PJ ativo com RT designado</li>
+        </ul>
+      </div>
+      <div class="day-block">
+        <h4>Tributação</h4>
+        <ul class="checklist">
+          <li>Contador especializado contratado</li>
+          <li>Regime tributário definido</li>
+          <li>Fator R simulado e validado</li>
+          <li>Pró-labore mensal estabelecido</li>
+          <li>Distribuição de lucros planejada</li>
+        </ul>
+      </div>
+      <div class="day-block">
+        <h4>Operacional</h4>
+        <ul class="checklist">
+          <li>Conta PJ aberta e ativa</li>
+          <li>Certificado digital A1 emitido</li>
+          <li>Emissor de NFS-e configurado</li>
+          <li>Maquininha PJ ativa</li>
+          <li>Sistema de prontuário escolhido</li>
+        </ul>
+      </div>
+      <div class="day-block">
+        <h4>Proteção & Crescimento</h4>
+        <ul class="checklist">
+          <li>Plano de saúde empresarial cotado</li>
+          <li>Seguro RCP médico contratado</li>
+          <li>Contrato com paciente (modelo) pronto</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-brand">Cirurgião Particular Premium</div>
+    <div class="footer-meta">Bônus exclusivo · Desafio Maio 2026</div>
+    <p class="footer-disclaimer">
+      Este guia é um material de referência operacional preparado por Patrick Suyti e Dr. Mateus Jerônimo para os participantes da Mentoria Cirurgião Particular Premium. Os valores, alíquotas, prazos e procedimentos descritos são <strong>estimativas e variam por estado, município e ano-calendário</strong>. Nada aqui substitui a orientação de um contador habilitado e um advogado tributarista. Sempre valide cada decisão com seu profissional de confiança antes de protocolar.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
