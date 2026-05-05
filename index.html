@@ -503,8 +503,8 @@
         <div class="stat-label">Frentes simultâneas</div>
       </div>
       <div class="stat">
-        <div class="stat-num">~13%</div>
-        <div class="stat-label">Carga tributária mínima</div>
+        <div class="stat-num">~8%</div>
+        <div class="stat-label">Carga mínima*</div>
       </div>
       <div class="stat">
         <div class="stat-num">1</div>
@@ -543,8 +543,9 @@
       <a href="#dia6"><span>Dia 6 · Conta PJ + NF-e</span><span class="toc-num">06</span></a>
       <a href="#dia7"><span>Dia 7 · Plano PJ + Convênios</span><span class="toc-num">07</span></a>
       <a href="#tributacao"><span>Anexo · Tributação Detalhada</span><span class="toc-num">08</span></a>
-      <a href="#fator-r"><span>Anexo · Fator R Explicado</span><span class="toc-num">09</span></a>
-      <a href="#checklist"><span>Checklist Final</span><span class="toc-num">10</span></a>
+      <a href="#equiparacao"><span>Anexo · Equiparação Hospitalar ⚡</span><span class="toc-num">09</span></a>
+      <a href="#fator-r"><span>Anexo · Fator R Explicado</span><span class="toc-num">10</span></a>
+      <a href="#checklist"><span>Checklist Final</span><span class="toc-num">11</span></a>
     </nav>
   </div>
 </div>
@@ -793,10 +794,16 @@
             <td>Cilada. Só cai aqui quem não controla o pró-labore.</td>
           </tr>
           <tr>
-            <td><strong>Lucro Presumido</strong></td>
+            <td><strong>Lucro Presumido</strong><br><span style="font-size:13px; color:var(--muted);">presunção padrão 32%</span></td>
             <td>Sem limite</td>
             <td><strong style="color:var(--gold-soft);">~13,33% a 16,33%</strong></td>
             <td>Faturamento alto + folha baixa, ou faturamento &gt; R$ 4,8M</td>
+          </tr>
+          <tr style="background: rgba(110, 201, 143, 0.04);">
+            <td><strong>Lucro Presumido</strong><br><span style="font-size:13px; color:var(--green);">com Equiparação Hospitalar ⚡</span></td>
+            <td>Sem limite</td>
+            <td><strong style="color:var(--green);">~8,65% a 11,33%</strong></td>
+            <td>Cirurgião que opera (consultório próprio ou parceria) — <strong>game changer</strong></td>
           </tr>
           <tr>
             <td><strong>Lucro Real</strong></td>
@@ -815,6 +822,7 @@
           <li>Entre <strong>R$ 25k e R$ 60k/mês</strong>: ainda Simples, ajustando pró-labore para manter Fator R</li>
           <li>Acima de <strong>R$ 60k/mês</strong>: simulação obrigatória — pode valer Lucro Presumido</li>
           <li>Acima de <strong>R$ 400k/mês</strong>: estourou Simples — Lucro Presumido é o caminho</li>
+          <li><strong style="color:var(--gold-bright);">Cirurgião que opera</strong>: peça simulação <em>com</em> equiparação hospitalar — pode derrubar a carga para <strong>~8-11%</strong> mesmo no Lucro Presumido. <a href="#equiparacao">Ver anexo →</a></li>
         </ul>
       </div>
     </div>
@@ -982,6 +990,140 @@
   </div>
 </section>
 
+<!-- EQUIPARAÇÃO HOSPITALAR -->
+<section id="equiparacao">
+  <div class="container">
+    <h2>Anexo · Equiparação Hospitalar <span style="color:var(--gold-bright);">⚡</span></h2>
+    <p class="narrow" style="padding:0; max-width:760px;">A jogada tributária mais subutilizada da medicina brasileira. Se você é cirurgião e <em>opera</em>, a Receita Federal te permite reduzir a base de presunção do IRPJ de 32% para 8% e da CSLL de 32% para 12%. Tradução: <strong>de 13-16% para 8-11% de carga total</strong>. Em um faturamento de R$ 100k/mês, são <strong>R$ 60-72k/ano</strong> que voltam pro seu bolso.</p>
+
+    <div class="calc-card">
+      <h3 style="margin-top:0;">O que é, em uma frase</h3>
+      <p>É a equiparação fiscal entre clínicas que prestam <strong>serviços hospitalares</strong> e os hospitais propriamente ditos — para fins de cálculo de IRPJ e CSLL no Lucro Presumido. Foi pacificada pelo STJ em <strong>recurso repetitivo (REsp 1.116.399/BA)</strong> e está prevista no <strong>art. 15, §1º, III, "a" da Lei 9.249/95</strong>.</p>
+
+      <h4 style="margin-top:32px;">A diferença na prática</h4>
+      <table class="tax-table" style="margin-top:12px;">
+        <thead>
+          <tr>
+            <th>Tributo</th>
+            <th>Lucro Presumido<br>padrão (32%)</th>
+            <th>Com Equiparação<br>Hospitalar</th>
+            <th>Economia</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>IRPJ</strong></td>
+            <td>15% × 32% = <strong>4,80%</strong></td>
+            <td>15% × 8% = <strong style="color:var(--green);">1,20%</strong></td>
+            <td>−3,60 p.p.</td>
+          </tr>
+          <tr>
+            <td><strong>CSLL</strong></td>
+            <td>9% × 32% = <strong>2,88%</strong></td>
+            <td>9% × 12% = <strong style="color:var(--green);">1,08%</strong></td>
+            <td>−1,80 p.p.</td>
+          </tr>
+          <tr>
+            <td>PIS</td>
+            <td>0,65%</td>
+            <td>0,65%</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>COFINS</td>
+            <td>3,00%</td>
+            <td>3,00%</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>ISS</td>
+            <td>2 a 5%</td>
+            <td>2 a 5%</td>
+            <td>—</td>
+          </tr>
+          <tr class="total-row">
+            <td><strong>Carga efetiva</strong></td>
+            <td><strong>~13,33% a 16,33%</strong></td>
+            <td><strong style="color:var(--green);">~8,65% a 11,33%</strong></td>
+            <td><strong style="color:var(--gold-bright);">−5,40 p.p.</strong></td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="font-size:13px; color:var(--muted);">Adicional de IRPJ de 10% sobre lucro presumido que exceder R$ 60k/trim continua se aplicando, mas sobre uma base muito menor.</p>
+    </div>
+
+    <h3>Quem se enquadra (e quem não se enquadra)</h3>
+    <div class="day-grid">
+      <div class="day-block" style="border-left: 3px solid var(--green);">
+        <h4 style="color:var(--green);">Se enquadra</h4>
+        <ul>
+          <li>Cirurgiões que <strong>operam no consultório próprio</strong> (pequenos procedimentos, lipo de papada, suspensão facial, biópsia, blefaroplastia)</li>
+          <li>Clínicas de <strong>endoscopia, colonoscopia, broncoscopia</strong></li>
+          <li>Centros de <strong>hemodiálise, quimioterapia, radioterapia</strong></li>
+          <li>Clínicas com <strong>day-clinic</strong> ou centro cirúrgico ambulatorial</li>
+          <li>Cirurgião que <strong>fatura honorários cirúrgicos via PJ</strong> (mesmo operando em hospital terceiro), desde que a PJ tenha estrutura compatível com RDC 50</li>
+          <li>Clínicas de <strong>fisioterapia, psicoterapia em grupo, fonoaudiologia</strong> com estrutura específica</li>
+        </ul>
+      </div>
+      <div class="day-block" style="border-left: 3px solid var(--red);">
+        <h4 style="color:var(--red);">NÃO se enquadra</h4>
+        <ul>
+          <li>Médico que faz <strong>apenas consulta</strong> (sem procedimento)</li>
+          <li>PJ <strong>Sociedade Simples</strong> (Sociedade Simples Pura) — precisa ser empresária</li>
+          <li>Quem está no <strong>Simples Nacional</strong> (não se aplica — Simples já tem regra própria)</li>
+          <li>Consultório que descumpre <strong>RDC 50/ANVISA</strong></li>
+          <li>PJ que terceiriza tudo e não presta o serviço diretamente</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3>Os 5 requisitos para gozar do benefício</h3>
+    <ol>
+      <li><strong>Estar no Lucro Presumido ou Lucro Real</strong> — é uma escolha alternativa ao Simples, não cumulativa.</li>
+      <li><strong>Ser sociedade empresária</strong> (Ltda. ou SLU) — não Sociedade Simples. Isso já entra no contrato social desde o Dia 1.</li>
+      <li><strong>Prestar serviços hospitalares</strong> conforme conceito do STJ — atividades constantes da <strong>RDC ANVISA 50/2002</strong> (e atualizações).</li>
+      <li><strong>Atender estrutura física mínima da RDC 50</strong> — sala de procedimentos, lavabo, EPIs, autoclave, prontuário, descarte de resíduos.</li>
+      <li><strong>Ter os CNAEs corretos</strong> — 8630-5/02 (consulta com procedimento), 8630-5/04 a 8630-5/07 conforme especialidade.</li>
+    </ol>
+
+    <h3>Como executar (ordem prática)</h3>
+    <ol>
+      <li><strong>Contrato social como sociedade empresária</strong> (ou alteração contratual se já é simples)</li>
+      <li><strong>CNAEs com procedimento</strong> registrados na Junta + Receita</li>
+      <li><strong>Alvará Sanitário pleno</strong> (não só consulta — precisa habilitar procedimento)</li>
+      <li><strong>Memorial descritivo</strong> demonstrando aderência à RDC 50</li>
+      <li><strong>Contador faz o enquadramento</strong> direto na DCTF/ECF — não precisa pedir autorização à Receita</li>
+      <li><strong>Se a Receita questionar</strong>: defesa administrativa ou <strong>mandado de segurança</strong> — jurisprudência já é favorável (REsp 1.116.399/BA é repetitivo, vincula primeira e segunda instância)</li>
+    </ol>
+
+    <div class="gold-box">
+      <h4>Simulação real · Cirurgião plástico faturando R$ 80k/mês</h4>
+      <p><strong>Cenário:</strong> R$ 960k/ano de honorários, opera no consultório próprio (lipo localizada, blefaroplastia), tem sala de procedimento equipada e licenciada.</p>
+      <ul>
+        <li><strong>Simples Anexo III com Fator R</strong>: ~13% efetivo → <strong>R$ 124.800/ano</strong></li>
+        <li><strong>Lucro Presumido sem equiparação</strong>: ~14,5% efetivo → <strong>R$ 139.200/ano</strong></li>
+        <li><strong>Lucro Presumido COM equiparação</strong>: ~9,5% efetivo → <strong>R$ 91.200/ano</strong></li>
+      </ul>
+      <p style="margin-top:16px; margin-bottom:0;"><em>Diferença vs Simples:</em> <strong style="color:var(--gold-bright);">R$ 33.600/ano no bolso.</strong> Em 5 anos, são <strong>R$ 168.000</strong> — um carro novo, uma sala maior, uma viagem inteira pra família. <em>Só por ter feito o enquadramento certo.</em></p>
+    </div>
+
+    <h3>Base legal (decore para a próxima conversa com o contador)</h3>
+    <ul>
+      <li><strong>Lei 9.249/1995</strong>, art. 15, §1º, III, "a" — define o percentual de presunção reduzido para serviços hospitalares</li>
+      <li><strong>IN RFB 1.700/2017</strong>, art. 33 — regulamenta a aplicação no Lucro Presumido</li>
+      <li><strong>RDC ANVISA 50/2002</strong> (e RDC 51/2011, 63/2011) — define estrutura física e atividades hospitalares</li>
+      <li><strong>REsp 1.116.399/BA</strong> (STJ, recurso repetitivo, 2010) — pacifica que basta a natureza do serviço, sem exigir internação</li>
+      <li><strong>Solução de Consulta Cosit 36/2016</strong> — Receita Federal reconhece equiparação para day-clinics</li>
+      <li><strong>Parecer SEI nº 7.689/2021</strong> — atualização da PGFN sobre o tema</li>
+    </ul>
+
+    <div class="alert">
+      <h4>Aviso · Não tente sozinho</h4>
+      <p>Equiparação hospitalar <strong>não é checkbox</strong>. É uma estratégia que precisa de contador especializado em medicina + (idealmente) um <strong>tributarista</strong> para validar o enquadramento. O upside é R$ 30-100k/ano. O downside, se mal feito, é autuação com juros e multa. Faça simulação detalhada antes de migrar e mantenha documentação técnica (RDC 50, alvará VISA, fotos da estrutura) arquivada.</p>
+    </div>
+  </div>
+</section>
+
 <!-- FATOR R -->
 <section id="fator-r">
   <div class="container">
@@ -1073,6 +1215,7 @@
           <li>Contador especializado contratado</li>
           <li>Regime tributário definido</li>
           <li>Fator R simulado e validado</li>
+          <li>Equiparação hospitalar simulada (se cirurgião)</li>
           <li>Pró-labore mensal estabelecido</li>
           <li>Distribuição de lucros planejada</li>
         </ul>
